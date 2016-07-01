@@ -1,0 +1,1 @@
+docker run --name=tmds_node_webdev -p 3000:3000 -p 3001:3001 -p 8080:8080 -v $(pwd):/home/app --workdir=/home/app -it --rm node:latest /bin/bash
