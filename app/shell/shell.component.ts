@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
     styleUrls: ['app/shell/shell.component.css']
 })
 export class ShellComponent {
-    title = 'Tabs App';
+    title = 'Angular 2 Demo';
 }
