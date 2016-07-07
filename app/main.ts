@@ -1,6 +1,19 @@
 ﻿import { bootstrap }    from '@angular/platform-browser-dynamic';
-//import { APP_ROUTER_PROVIDERS } from './app.routes';
+import {provide, Component} from '@angular/core';
+import { APP_ROUTER_PROVIDERS } from './app.routes';
+import {ROUTER_DIRECTIVES} from '@angular/router';
 
-import { ShellComponent } from './shell/shell.component';
+@Component({
+    selector: 'app',
+    directives: [ROUTER_DIRECTIVES],
+    template: `
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+    `
+})
+export class AppComponent {
+    componentName: 'AppComponent'
+}
 
-bootstrap(ShellComponent);
+bootstrap(AppComponent, [APP_ROUTER_PROVIDERS]);

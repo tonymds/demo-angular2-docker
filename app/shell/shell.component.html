@@ -1,1 +1,12 @@
-﻿<h1>{{title}}</h1>
+<div class="ui-g" style="border: 1px solid red">
+    <div class="ui-g-12">
+      <h1>
+        {{title}}
+      </h1>
+    </div>
+</div>﻿
+
+<div class="ui-g" style="border: 1px solid blue">
+    <div class="ui-g-3"><navigation (onMenuClick)="onMenuClick($event)"></navigation></div>
+    <div class="ui-g-9"><content [openTabs]="openTabs"></content></div>
+</div>
