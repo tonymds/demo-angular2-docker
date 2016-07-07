@@ -14,21 +14,16 @@
  */
 
 module.exports = {
-
-    files: [
+    files: ["./build/**/*.{html,htm,css,js}",
     {
-        match: ["./build/**/*.{html,htm,css,js}"],
-    },
-    {
-        match: ["./app/**/*.ts"],
+        match: ["*.{html,js,json}","./app/**/*.{html,htm,css,ts}"],
         fn: function (event, file) {
             console.log("File changed: " + file);
             var exec = require('child_process').exec;
             //child = exec('tsc ' + file).stderr.pipe(process.stderr);
             child = exec('tsc').stderr.pipe(process.stderr);
         }
-    }],
-    watchOptions: {
-        usePolling: true
     }
+    ],
+    exclude: ["app/**/*.*"]
 };
